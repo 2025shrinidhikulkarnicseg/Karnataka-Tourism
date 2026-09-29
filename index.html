@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Karnataka | One State, Many Worlds</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            karnataka: {
+              gold: '#E5A93C',
+              richgold: '#C98A19',
+              maroon: '#80131A',
+              forest: '#144634',
+              deepgreen: '#0E2E23',
+              sand: '#FAF6EE',
+              charcoal: '#1B1E23'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            display: ['Playfair Display', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbar and glassmorphism styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1B1E23;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C98A19;
+      border-radius: 4px;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .glass-dark {
+      background: rgba(14, 46, 35, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(14, 46, 35, 0.45) 0%, rgba(20, 30, 25, 0.85) 75%, #FAF6EE 100%);
+    }
+    .card-zoom:hover img {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+
+<body class="bg-karnataka-sand text-karnataka-charcoal font-sans antialiased selection:bg-karnataka-gold selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-karnataka-maroon text-white text-xs sm:text-sm py-2 px-4 text-center tracking-wider flex justify-center items-center gap-3">
+    <span class="inline-block px-2 py-0.5 rounded-full bg-karnataka-gold text-karnataka-charcoal font-bold text-xs uppercase">Welcome</span>
+    <span>ಸರ್ವರಿಗೂ ಸುಸ್ವಾಗತ — Discover Karnataka: "One State, Many Worlds"</span>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-amber-100 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-karnataka-maroon via-karnataka-gold to-yellow-400 flex items-center justify-center text-white shadow-md transform group-hover:rotate-6 transition-transform">
+          <i class="fa-solid fa-gopuram text-2xl"></i>
+        </div>
+        <div>
+          <span class="block text-2xl font-serif font-black tracking-tight text-karnataka-deepgreen leading-none">KARNATAKA</span>
+          <span class="text-xs uppercase tracking-widest text-karnataka-richgold font-semibold">One State, Many Worlds</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-7 font-medium text-sm text-gray-700">
+        <a href="#about" class="hover:text-karnataka-richgold transition-colors">About</a>
+        <a href="#destinations" class="hover:text-karnataka-richgold transition-colors">Destinations</a>
+        <a href="#heritage" class="hover:text-karnataka-richgold transition-colors">Heritage</a>
+        <a href="#nature" class="hover:text-karnataka-richgold transition-colors">Hills & Falls</a>
+        <a href="#cuisine" class="hover:text-karnataka-richgold transition-colors">Cuisine</a>
+        <a href="#gallery" class="hover:text-karnataka-richgold transition-colors">Gallery</a>
+        <a href="#planner" class="hover:text-karnataka-richgold transition-colors">Trip Planner</a>
+        <a href="#travel-info" class="hover:text-karnataka-richgold transition-colors">Travel Info</a>
+      </nav>
+
+      <!-- Right Call to Action -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#planner" class="bg-gradient-to-r from-karnataka-forest to-karnataka-deepgreen text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:from-karnataka-deepgreen hover:to-emerald-950 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-compass text-karnataka-gold animate-spin-slow"></i> Plan Your Tour
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-amber-50 focus:outline-none">
+        <i class="fa-solid fa-bars-staggered text-2xl" id="menuIcon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-amber-200 px-6 py-6 transition-all shadow-xl">
+      <div class="flex flex-col gap-4 font-medium text-gray-800">
+        <a href="#about" class="mobile-nav-link hover:text-karnataka-gold">About Karnataka</a>
+        <a href="#destinations" class="mobile-nav-link hover:text-karnataka-gold">Tourist Destinations</a>
+        <a href="#heritage" class="mobile-nav-link hover:text-karnataka-gold">Historical Landmarks</a>
+        <a href="#nature" class="mobile-nav-link hover:text-karnataka-gold">Waterfalls & Hill Stations</a>
+        <a href="#cuisine" class="mobile-nav-link hover:text-karnataka-gold">Famous Foods</a>
+        <a href="#gallery" class="mobile-nav-link hover:text-karnataka-gold">Photo Gallery</a>
+        <a href="#planner" class="mobile-nav-link hover:text-karnataka-gold">Trip Budget Estimator</a>
+        <a href="#travel-info" class="mobile-nav-link hover:text-karnataka-gold">Travel Information & Etiquette</a>
+        <a href="#planner" class="bg-karnataka-forest text-center text-white py-2.5 rounded-full font-semibold mt-2">Start Exploring Now</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1600100397608-f010f444f499?auto=format&fit=crop&w=2000&q=80" 
+           alt="Mysore Palace illuminated in royal glory" 
+           class="w-full h-full object-cover object-center filter brightness-[0.78]"
+           onerror="this.src='https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1920&q=80'">
+      <div class="absolute inset-0 bg-gradient-to-t from-karnataka-deepgreen/95 via-black/45 to-black/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20 text-white">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-amber-300 font-semibold text-xs sm:text-sm mb-6 tracking-widest uppercase">
+        <i class="fa-solid fa-crown"></i> Incredible India's Jewel
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-black tracking-tight leading-tight sm:leading-none text-white drop-shadow-xl mb-6">
+        KARNATAKA
+        <span class="block text-2xl sm:text-3xl md:text-4xl font-display font-medium italic text-karnataka-gold mt-3">
+          One State, Many Worlds.
+        </span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-200 font-light mb-10 leading-relaxed drop-shadow">
+        From the majestic royal palaces of Mysuru and the ancient ruins of Vijayanagara, to the misty coffee plantations of Coorg and pristine golden beaches of Karavali.
+      </p>
+
+      <!-- Search / Fast Filter Form -->
+      <div class="max-w-2xl mx-auto bg-white/95 rounded-2xl p-2 sm:p-3 shadow-2xl flex flex-col sm:flex-row gap-2 items-center mb-12 border border-white/40">
+        <div class="flex items-center gap-3 px-3 w-full text-gray-700">
+          <i class="fa-solid fa-magnifying-glass text-karnataka-richgold text-lg"></i>
+          <input type="text" id="quickSearchInput" placeholder="Search Hampi, Coorg, Mysore Masala Dosa, Jog Falls..." class="w-full bg-transparent focus:outline-none text-sm text-gray-900 placeholder:text-gray-400 py-2">
+        </div>
+        <button onclick="handleQuickSearch()" class="w-full sm:w-auto px-8 py-3 bg-karnataka-forest hover:bg-karnataka-deepgreen text-white font-semibold text-sm rounded-xl transition shadow flex items-center justify-center gap-2 whitespace-nowrap">
+          <span>Search</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Highlights Counter Pillows -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-center transform hover:-translate-y-1 transition duration-300">
+          <p class="text-3xl sm:text-4xl font-serif font-bold text-karnataka-gold">3</p>
+          <p class="text-xs uppercase tracking-wider text-gray-300 mt-1">UNESCO World Heritage Sites</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-center transform hover:-translate-y-1 transition duration-300">
+          <p class="text-3xl sm:text-4xl font-serif font-bold text-karnataka-gold">320+ <span class="text-xl">km</span></p>
+          <p class="text-xs uppercase tracking-wider text-gray-300 mt-1">Arabian Sea Coastline</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-center transform hover:-translate-y-1 transition duration-300">
+          <p class="text-3xl sm:text-4xl font-serif font-bold text-karnataka-gold">25+</p>
+          <p class="text-xs uppercase tracking-wider text-gray-300 mt-1">Wildlife Sanctuaries & Parks</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-center transform hover:-translate-y-1 transition duration-300">
+          <p class="text-3xl sm:text-4xl font-serif font-bold text-karnataka-gold">70%</p>
+          <p class="text-xs uppercase tracking-wider text-gray-300 mt-1">India's Coffee Production</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll down indicator -->
+    <a href="#about" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/80 hover:text-karnataka-gold flex flex-col items-center gap-1 text-xs tracking-widest uppercase transition">
+      <span>Scroll Down</span>
+      <i class="fa-solid fa-chevron-down animate-bounce"></i>
+    </a>
+  </section>
+
+  <section id="about" class="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Text Description -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 text-karnataka-richgold font-semibold text-xs sm:text-sm tracking-widest uppercase">
+          <span class="w-8 h-[2px] bg-karnataka-richgold inline-block"></span>
+          Introduction to the Land of Gold & Sandalwood
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-karnataka-deepgreen leading-tight">
+          A Tapestry of Imperial Splendor & Natural Wonder
+        </h2>
+
+        <p class="text-gray-700 leading-relaxed font-light text-base sm:text-lg">
+          Karnataka, nestled in south-western India, is an enchanting realm of geographical diversity and timeless heritage. Celebrated as the cradle of legendary empires—the Vijayanagara, Chalukyas, Rashtrakutas, and Wodeyars—Karnataka resonates with classical Kannada literature, Yakshagana folk dance, and Carnatic music traditions.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed font-light text-base">
+          From the mist-draped rainforest peaks of the Western Ghats (a UNESCO biodiversity hotspot) to the serene azure waters of the Arabian Sea and the boulder-strewn arid plains of the Deccan Plateau, Karnataka is truly <strong class="text-karnataka-maroon font-semibold">"One State, Many Worlds"</strong>.
+        </p>
+
+        <!-- Geographic Zones Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+          <div class="p-4 rounded-xl bg-amber-50/80 border border-amber-200/70 hover:shadow-md transition">
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3">
+              <i class="fa-solid fa-umbrella-beach text-lg"></i>
+            </div>
+            <h4 class="font-serif font-bold text-karnataka-deepgreen text-base">Karavali (Coastal)</h4>
+            <p class="text-xs text-gray-600 mt-1">320km of untouched beaches, dolphin watching, surfing & divine Udupi temple cuisine.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-amber-50/80 border border-amber-200/70 hover:shadow-md transition">
+            <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center mb-3">
+              <i class="fa-solid fa-mountain text-lg"></i>
+            </div>
+            <h4 class="font-serif font-bold text-karnataka-deepgreen text-base">Malnad (Hills)</h4>
+            <p class="text-xs text-gray-600 mt-1">Lush evergreen Western Ghats, spice gardens, roaring waterfalls and aromatic coffee estates.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-amber-50/80 border border-amber-200/70 hover:shadow-md transition">
+            <div class="w-10 h-10 rounded-lg bg-stone-200 text-stone-800 flex items-center justify-center mb-3">
+              <i class="fa-solid fa-monument text-lg"></i>
+            </div>
+            <h4 class="font-serif font-bold text-karnataka-deepgreen text-base">Bayaluseeme (Plains)</h4>
+            <p class="text-xs text-gray-600 mt-1">Deccan plateau holding millennium-old rock monuments, sprawling sunflower fields and regal forts.</p>
+          </div>
+        </div>
+
+        <div class="pt-2 flex flex-wrap items-center gap-4">
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <i class="fa-solid fa-language text-karnataka-richgold"></i>
+            <span>State Language: <strong>Kannada (ಕನ್ನಡ)</strong></span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <i class="fa-solid fa-city text-karnataka-richgold"></i>
+            <span>Capital: <strong>Bengaluru (Silicon Valley)</strong></span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <i class="fa-solid fa-tree text-karnataka-richgold"></i>
+            <span>State Tree: <strong>Sandalwood</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Grid Showcase -->
+      <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <div class="rounded-2xl overflow-hidden shadow-lg h-56 card-zoom relative">
+            <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=700&q=80" 
+                 alt="Hampi Stone Chariot Karnataka" 
+                 class="w-full h-full object-cover transition-transform duration-500">
+            <span class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">Hampi UNESCO</span>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg h-40 card-zoom relative">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=80" 
+                 alt="Chikmagalur tea and coffee estates" 
+                 class="w-full h-full object-cover transition-transform duration-500">
+            <span class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">Chikmagalur Estates</span>
+          </div>
+        </div>
+
+        <div class="space-y-4 pt-6">
+          <div class="rounded-2xl overflow-hidden shadow-lg h-40 card-zoom relative">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80" 
+                 alt="Gokarna OM Beach" 
+                 class="w-full h-full object-cover transition-transform duration-500">
+            <span class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">Gokarna Shores</span>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg h-56 card-zoom relative">
+            <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=700&q=80" 
+                 alt="Elephant Safari Bandipur" 
+                 class="w-full h-full object-cover transition-transform duration-500">
+            <span class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">Kabini & Bandipur</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="destinations" class="py-20 bg-white border-y border-amber-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-karnataka-richgold font-semibold text-xs sm:text-sm tracking-widest uppercase">Popular Destinations</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-karnataka-deepgreen mt-2">Discover Karnataka's Best</h2>
+        <p class="text-gray-600 mt-3 text-base">Filter across various realms to plan your dream vacation across sacred shrines, wild reserves, and tranquil shorelines.</p>
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mt-8" id="destFilterButtons">
+          <button onclick="filterDestinations('all')" class="dest-btn active-tab px-5 py-2 rounded-full text-sm font-semibold transition bg-karnataka-forest text-white shadow-md">All Places</button>
+          <button onclick="filterDestinations('heritage')" class="dest-btn px-5 py-2 rounded-full text-sm font-semibold transition bg-gray-100 text-gray-700 hover:bg-amber-100">Heritage</button>
+          <button onclick="filterDestinations('nature')" class="dest-btn px-5 py-2 rounded-full text-sm font-semibold transition bg-gray-100 text-gray-700 hover:bg-amber-100">Nature & Hills</button>
+          <button onclick="filterDestinations('wildlife')" class="dest-btn px-5 py-2 rounded-full text-sm font-semibold transition bg-gray-100 text-gray-700 hover:bg-amber-100">Wildlife</button>
+          <button onclick="filterDestinations('coastal')" class="dest-btn px-5 py-2 rounded-full text-sm font-semibold transition bg-gray-100 text-gray-700 hover:bg-amber-100">Coastal & Beaches</button>
+          <button onclick="filterDestinations('spiritual')" class="dest-btn px-5 py-2 rounded-full text-sm font-semibold transition bg-gray-100 text-gray-700 hover:bg-amber-100">Spiritual</button>
+        </div>
+      </div>
+
+      <!-- Destination Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="destinationGrid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <section id="heritage" class="py-20 lg:py-28 bg-karnataka-deepgreen text-white relative overflow-hidden">
+    <!-- Subtle Background Ornament -->
+    <div class="absolute -right-20 -bottom-20 opacity-5 text-[28rem] font-serif select-none pointer-events-none text-karnataka-gold">
+      <i class="fa-solid fa-gopuram"></i>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl mb-16">
+        <span class="text-karnataka-gold font-semibold text-xs sm:text-sm tracking-widest uppercase">Chronicles of Power & Architecture</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2 leading-tight">
+          Monumental History Carved in Stone & Gold
+        </h2>
+        <p class="text-gray-300 mt-4 text-base sm:text-lg font-light leading-relaxed">
+          Walk in the footsteps of kings, scholars, and master sculptors. Karnataka is home to world-renowned medieval empires whose monuments continue to inspire architectural reverence.
+        </p>
+      </div>
+
+      <!-- Heritage Showcase Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Big Feature: Hampi -->
+        <div class="lg:col-span-7 bg-white/5 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md flex flex-col justify-between group hover:border-karnataka-gold/60 transition duration-500">
+          <div>
+            <div class="relative h-72 sm:h-84 rounded-2xl overflow-hidden mb-6">
+              <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Hampi Stone Chariot Vijayanagara" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute top-4 left-4 bg-karnataka-maroon/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm">
+                UNESCO World Heritage Site
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-karnataka-gold text-sm font-semibold mb-2">
+              <i class="fa-solid fa-landmark"></i> 14th Century Vijayanagara Empire
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-3">Hampi & The Vijayanagara Ruins</h3>
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed font-light mb-6">
+              Once the world's second-largest medieval-era city after Beijing, Hampi is an open-air museum carved among boulder hills and banana groves beside the Tungabhadra River. Featuring the iconic stone chariot of the Vittala Temple, Virupaksha Temple, and the Lotus Mahal.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+            <span class="text-xs text-gray-400"><i class="fa-solid fa-map-pin text-karnataka-gold mr-1"></i> Vijayanagara District</span>
+            <button onclick="openModal('hampi')" class="text-sm font-semibold text-karnataka-gold hover:text-white flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+              Explore History <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2 Side Heritage Cards: Mysore Palace & Hoysala Temples -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          
+          <!-- Mysore Palace -->
+          <div class="bg-white/5 border border-white/15 rounded-3xl p-6 backdrop-blur-md group hover:border-karnataka-gold/60 transition duration-300">
+            <div class="h-44 rounded-xl overflow-hidden mb-4 relative">
+              <img src="https://images.unsplash.com/photo-1600100397608-f010f444f499?auto=format&fit=crop&w=800&q=80" 
+                   alt="Mysore Palace illuminated at night" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-black/60 text-karnataka-gold text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">Wodeyar Dynasty</span>
+            </div>
+            <h4 class="text-xl font-serif font-bold text-white mb-2">Mysuru Palace (Amba Vilas)</h4>
+            <p class="text-gray-300 text-xs sm:text-sm line-clamp-2 mb-4 font-light">
+              An Indo-Saracenic marvel with stained glass ceilings, ornate silver doors, and 100,000 lamps illuminating the night sky during Dasara.
+            </p>
+            <button onclick="openModal('mysore')" class="text-xs text-karnataka-gold hover:text-white font-semibold flex items-center gap-1.5">
+              Read Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+
+          <!-- Belur & Halebidu -->
+          <div class="bg-white/5 border border-white/15 rounded-3xl p-6 backdrop-blur-md group hover:border-karnataka-gold/60 transition duration-300">
+            <div class="h-44 rounded-xl overflow-hidden mb-4 relative">
+              <img src="https://images.unsplash.com/photo-1620619767323-b95a89183081?auto=format&fit=crop&w=800&q=80" 
+                   alt="Hoysaleswara Temple Halebidu" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.src='https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=800&q=80'">
+              <span class="absolute top-3 right-3 bg-karnataka-maroon text-white text-xs px-2.5 py-1 rounded-md">UNESCO Inscription 2023</span>
+            </div>
+            <h4 class="text-xl font-serif font-bold text-white mb-2">Belur & Halebidu (Hoysala Temples)</h4>
+            <p class="text-gray-300 text-xs sm:text-sm line-clamp-2 mb-4 font-light">
+              Intricate soapstone carvings illustrating epics, celestial dancers (Madanikas), and star-shaped architectural platforms.
+            </p>
+            <button onclick="openModal('hoysala')" class="text-xs text-karnataka-gold hover:text-white font-semibold flex items-center gap-1.5">
+              Read Details <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Additional Heritage Highlights Ribbon -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white/10 rounded-2xl p-4 border border-white/10 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-karnataka-gold flex items-center justify-center shrink-0 text-xl font-serif">1</div>
+          <div>
+            <h5 class="font-bold text-sm text-white">Badami Cave Temples</h5>
+            <p class="text-xs text-gray-300">6th-century rock-cut shrines overlooking Agastya Lake.</p>
+          </div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-4 border border-white/10 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-karnataka-gold flex items-center justify-center shrink-0 text-xl font-serif">2</div>
+          <div>
+            <h5 class="font-bold text-sm text-white">Gol Gumbaz, Vijayapura</h5>
+            <p class="text-xs text-gray-300">World's second-largest acoustic dome with whispering gallery.</p>
+          </div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-4 border border-white/10 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-karnataka-gold flex items-center justify-center shrink-0 text-xl font-serif">3</div>
+          <div>
+            <h5 class="font-bold text-sm text-white">Pattadakal</h5>
+            <p class="text-xs text-gray-300">UNESCO confluence of Dravidian and Nagara temple styles.</p>
+          </div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-4 border border-white/10 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-karnataka-gold flex items-center justify-center shrink-0 text-xl font-serif">4</div>
+          <div>
+            <h5 class="font-bold text-sm text-white">Srirangapatna</h5>
+            <p class="text-xs text-gray-300">Island fortress of Tipu Sultan & summer palace murals.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="nature" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+      <div>
+        <span class="text-karnataka-richgold font-semibold text-xs sm:text-sm tracking-widest uppercase">The Western Ghats Sanctuary</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-karnataka-deepgreen mt-2">
+          Thunderous Falls & Misty Hilltops
+        </h2>
+      </div>
+      <p class="text-gray-600 max-w-md mt-4 md:mt-0 text-sm sm:text-base">
+        Immerse yourself in refreshing mountain breezes, lush evergreen canopies, gushing torrents, and serene homestay retreats.
+      </p>
+    </div>
+
+    <!-- Waterfall & Hill Station Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Jog Falls -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+        <div class="h-56 relative overflow-hidden card-zoom">
+          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80" 
+               alt="Jog Falls Shimoga Karnataka" 
+               class="w-full h-full object-cover transition-transform duration-500"
+               onerror="this.src='https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=80'">
+          <div class="absolute top-3 right-3 bg-karnataka-forest text-white text-xs px-2.5 py-1 rounded-full font-semibold">253m Drop</div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs text-karnataka-richgold font-semibold uppercase tracking-wider mb-1">Waterfalls · Sagara</div>
+            <h3 class="font-serif font-bold text-xl text-karnataka-deepgreen mb-2">Jog Falls (Gerosoppa)</h3>
+            <p class="text-gray-600 text-xs sm:text-sm font-light leading-relaxed mb-4">
+              India's second highest plunge waterfall formed by the Sharavathi river, dropping into 4 distinct cascades: Raja, Roarer, Rocket, and Rani.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span><i class="fa-regular fa-calendar-check text-karnataka-richgold mr-1"></i> Best: Aug – Nov</span>
+            <span class="font-semibold text-emerald-700">Monsoon Wonder</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coorg (Kodagu) -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+        <div class="h-56 relative overflow-hidden card-zoom">
+          <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=80" 
+               alt="Coorg coffee plantation mist" 
+               class="w-full h-full object-cover transition-transform duration-500">
+          <div class="absolute top-3 right-3 bg-karnataka-maroon text-white text-xs px-2.5 py-1 rounded-full font-semibold">Scotland of India</div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs text-karnataka-richgold font-semibold uppercase tracking-wider mb-1">Hill Station · Western Ghats</div>
+            <h3 class="font-serif font-bold text-xl text-karnataka-deepgreen mb-2">Coorg (Kodagu)</h3>
+            <p class="text-gray-600 text-xs sm:text-sm font-light leading-relaxed mb-4">
+              Famous for emerald coffee and cardamom estates, Raja's Seat sunsets, Abbey Falls, Talakaveri, and the valiant martial Kodava hospitality.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span><i class="fa-regular fa-calendar-check text-karnataka-richgold mr-1"></i> Best: Oct – Mar</span>
+            <span class="font-semibold text-emerald-700">1,170m Elevation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chikmagalur -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+        <div class="h-56 relative overflow-hidden card-zoom">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80" 
+               alt="Mullayanagiri Chikmagalur peak" 
+               class="w-full h-full object-cover transition-transform duration-500"
+               onerror="this.src='https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=80'">
+          <div class="absolute top-3 right-3 bg-amber-600 text-white text-xs px-2.5 py-1 rounded-full font-semibold">Coffee Capital</div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs text-karnataka-richgold font-semibold uppercase tracking-wider mb-1">Highest Peak · Trekking</div>
+            <h3 class="font-serif font-bold text-xl text-karnataka-deepgreen mb-2">Chikmagalur & Mullayanagiri</h3>
+            <p class="text-gray-600 text-xs sm:text-sm font-light leading-relaxed mb-4">
+              Where coffee was first seeded in India by Sufi saint Baba Budan. Hike to Karnataka's highest peak Mullayanagiri (1,930m) or relax in cloud-kissed estates.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span><i class="fa-regular fa-calendar-check text-karnataka-richgold mr-1"></i> Best: Sep – Mar</span>
+            <span class="font-semibold text-emerald-700">1,930m Highest Peak</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shivanasamudra Falls -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+        <div class="h-56 relative overflow-hidden card-zoom">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" 
+               alt="Waterfalls in Karnataka" 
+               class="w-full h-full object-cover transition-transform duration-500"
+               onerror="this.src='https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80'">
+          <div class="absolute top-3 right-3 bg-blue-600 text-white text-xs px-2.5 py-1 rounded-full font-semibold">Kaveri River</div>
+        </div>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs text-karnataka-richgold font-semibold uppercase tracking-wider mb-1">Twin Falls · Mandya</div>
+            <h3 class="font-serif font-bold text-xl text-karnataka-deepgreen mb-2">Shivanasamudra Falls</h3>
+            <p class="text-gray-600 text-xs sm:text-sm font-light leading-relaxed mb-4">
+              Divided into the Gaganachukki and Bharachukki falls, this river island site on the sacred Kaveri is also home to Asia’s first hydroelectric power plant (1902).
+            </p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span><i class="fa-regular fa-calendar-check text-karnataka-richgold mr-1"></i> Best: Jul – Oct</span>
+            <span class="font-semibold text-emerald-700">Twin Cascades</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hill Stations Banner Highlight -->
+    <div class="mt-12 bg-gradient-to-r from-karnataka-deepgreen to-karnataka-forest rounded-3xl p-8 text-white flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
+      <div class="space-y-2">
+        <h4 class="text-2xl font-serif font-bold text-karnataka-gold">Looking for more serene hills?</h4>
+        <p class="text-gray-200 text-sm max-w-xl">
+          Don't miss <strong>Kemmangundi</strong> (royal summer retreat of Krishnaraja Wodeyar IV), <strong>Kudremukh</strong> (horse-faced peak with shola grasslands), and <strong>Nandi Hills</strong> for magical Bengaluru sunrises!
+        </p>
+      </div>
+      <button onclick="filterDestinations('nature'); document.getElementById('destinations').scrollIntoView();" class="px-6 py-3 rounded-full bg-karnataka-gold text-karnataka-charcoal font-bold text-sm hover:bg-yellow-400 transition shadow whitespace-nowrap">
+        Explore Nature Trails
+      </button>
+    </div>
+  </section>
+
+  <section id="cuisine" class="py-20 lg:py-28 bg-amber-50/70 border-y border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-karnataka-richgold font-semibold text-xs sm:text-sm tracking-widest uppercase">Gastronomic Journey</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-karnataka-deepgreen mt-2">
+          Karnataka's Legendary Culinary Flavors
+        </h2>
+        <p class="text-gray-600 mt-4 text-base">
+          From fiery coastal ghee roasts to the sweet melt-in-mouth heritage of the royal Mysore kitchens, every region offers an unforgettable banquet.
+        </p>
+      </div>
+
+      <!-- Food Gallery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Mysore Masala Dosa -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100 group">
+          <div class="h-56 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=700&q=80" 
+                 alt="Crispy Mysore Masala Dosa" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80'">
+            <span class="absolute top-3 right-3 bg-karnataka-gold text-karnataka-charcoal font-bold text-xs px-3 py-1 rounded-full">Mysuru & Bengaluru</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mb-2">Mysore Masala Dosa</h3>
+            <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+              Crisp golden crepe smeared on the inside with a signature spicy red garlic-chutney paste, generously loaded with potato palya and bathed in pure desi ghee.
+            </p>
+            <div class="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-100">
+              <span><i class="fa-solid fa-utensils text-karnataka-richgold mr-1"></i> Breakfast Classic</span>
+              <span class="font-medium text-karnataka-maroon">Must Try: Mylari, Mysuru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mysore Pak -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100 group">
+          <div class="h-56 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=700&q=80" 
+                 alt="Mysore Pak Sweet" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80'">
+            <span class="absolute top-3 right-3 bg-karnataka-maroon text-white font-bold text-xs px-3 py-1 rounded-full">Royal Invention</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mb-2">Mysore Pak</h3>
+            <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+              Created in 1935 by Kakasura Madappa, the royal chef of Mysore Palace. Crafted from gram flour (besan), sugar syrup, and lavish amounts of ghee that melt softly on your tongue.
+            </p>
+            <div class="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-100">
+              <span><i class="fa-solid fa-cookie-bite text-karnataka-richgold mr-1"></i> Royal Sweet</span>
+              <span class="font-medium text-karnataka-maroon">Guru Sweets, Mysuru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bisi Bele Bath -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100 group">
+          <div class="h-56 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" 
+                 alt="Bisi Bele Bath hot lentil rice" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80'">
+            <span class="absolute top-3 right-3 bg-karnataka-forest text-white font-bold text-xs px-3 py-1 rounded-full">Comfort Food</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mb-2">Bisi Bele Bath</h3>
+            <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+              Literally translating to "hot lentil rice," this wholesome dish is slow-cooked with rice, pigeon peas, assorted vegetables, tamarind, and a distinct 30-spice homemade masala blend.
+            </p>
+            <div class="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-100">
+              <span><i class="fa-solid fa-bowl-food text-karnataka-richgold mr-1"></i> Served with Boondi</span>
+              <span class="font-medium text-karnataka-maroon">MTR, Bengaluru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Neer Dosa & Mangalorean Fish Curry -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100 group">
+          <div class="h-56 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=80" 
+                 alt="Coastal Neer Dosa" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80'">
+            <span class="absolute top-3 right-3 bg-blue-600 text-white font-bold text-xs px-3 py-1 rounded-full">Karavali Coast</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mb-2">Neer Dosa & Seafood</h3>
+            <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+              Feather-light, water-thin unfermented rice crepes paired with coconut-rich Mangalorean Anjal (Kingfish) curry, Chicken Kundapura, or freshly grated coconut and jaggery.
+            </p>
+            <div class="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-100">
+              <span><i class="fa-solid fa-fish text-karnataka-richgold mr-1"></i> Coastal Tuluva Style</span>
+              <span class="font-medium text-karnataka-maroon">Giri Manja's, Mangaluru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maddur Vada & Dharwad Peda -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100 group">
+          <div class="h-56 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" 
+                 alt="Maddur Vada Crispy Snack" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-amber-700 text-white font-bold text-xs px-3 py-1 rounded-full">Highway Legend</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mb-2">Maddur Vada</h3>
+            <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+              Crisp fritters made from semolina, rice flour, sliced onions, curry leaves, and green chillies. Born at the Maddur railway station in 1917, it's an indispensable highway companion.
+            </p>
+            <div class="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-100">
+              <span><i class="fa-solid fa-train text-karnataka-richgold mr-1"></i> Tea-time Snack</span>
+              <span class="font-medium text-karnataka-maroon">Maddur Tiffany's</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chikmagalur Filter Coffee -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-amber-100 group">
+          <div class="h-56 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" 
+                 alt="South Indian Filter Coffee tumbler" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 right-3 bg-emerald-800 text-white font-bold text-xs px-3 py-1 rounded-full">Plantation Fresh</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mb-2">Karnataka Filter Kaapi</h3>
+            <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+              Brewed in traditional stainless steel filters with freshly ground Arabica and Robusta beans from Malnad hills, served frothing high in a gleaming brass 'Davarah & Tumbler'.
+            </p>
+            <div class="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-100">
+              <span><i class="fa-solid fa-mug-hot text-karnataka-richgold mr-1"></i> Morning Fuel</span>
+              <span class="font-medium text-karnataka-maroon">Brahmin's Coffee Bar</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="gallery" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-karnataka-richgold font-semibold text-xs sm:text-sm tracking-widest uppercase">Visual Canvas</span>
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-karnataka-deepgreen mt-2">
+        Vibrant Karnataka Image Gallery
+      </h2>
+      <p class="text-gray-600 mt-2 text-base">Click any photograph to view high-resolution image details and story.</p>
+
+      <!-- Gallery Filter buttons -->
+      <div class="flex flex-wrap justify-center gap-2 mt-6" id="galleryFilterContainer">
+        <button onclick="filterGallery('all')" class="gallery-tag active-tab px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition bg-karnataka-deepgreen text-white">All Photos</button>
+        <button onclick="filterGallery('monuments')" class="gallery-tag px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition bg-gray-100 text-gray-700 hover:bg-amber-100">Monuments</button>
+        <button onclick="filterGallery('nature')" class="gallery-tag px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition bg-gray-100 text-gray-700 hover:bg-amber-100">Nature & Hills</button>
+        <button onclick="filterGallery('culture')" class="gallery-tag px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition bg-gray-100 text-gray-700 hover:bg-amber-100">Culture & People</button>
+        <button onclick="filterGallery('coastal')" class="gallery-tag px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition bg-gray-100 text-gray-700 hover:bg-amber-100">Coastline</button>
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryContainer">
+      <!-- Injected by JavaScript -->
+    </div>
+  </section>
+
+  <section id="planner" class="py-20 bg-gradient-to-br from-amber-50 via-white to-amber-100/60 border-t border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-karnataka-richgold font-semibold text-xs sm:text-sm tracking-widest uppercase">Smart Travel Assistant</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-karnataka-deepgreen leading-tight">
+            Karnataka Trip Estimator & Circuit Recommender
+          </h2>
+          <p class="text-gray-600 text-sm sm:text-base font-light">
+            Plan your budget and choose the optimal itinerary according to your travel style, number of days, and preferences.
+          </p>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-amber-200/80 space-y-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Your Preferred Circuit</label>
+              <select id="circuitSelect" onchange="calculateTripEstimate()" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-karnataka-gold focus:outline-none">
+                <option value="royal">Royal Heritage (Bengaluru - Mysuru - Hampi)</option>
+                <option value="nature">Misty Hills & Coffee (Coorg - Chikmagalur - Wayanad Border)</option>
+                <option value="coastal">Golden Karavali (Mangaluru - Udupi - Murudeshwar - Gokarna)</option>
+                <option value="wildlife">Jungle Safari (Kabini - Bandipur - Nagarhole)</option>
+              </select>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Days</label>
+                <input type="number" id="tripDays" value="4" min="2" max="15" onchange="calculateTripEstimate()" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-karnataka-gold focus:outline-none">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Travelers</label>
+                <input type="number" id="tripTravelers" value="2" min="1" max="10" onchange="calculateTripEstimate()" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-karnataka-gold focus:outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Travel Style</label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="setTravelStyle('budget')" id="style-budget" class="style-btn py-2 text-xs font-semibold rounded-lg border border-gray-300 bg-white hover:bg-amber-50">Backpacker</button>
+                <button type="button" onclick="setTravelStyle('comfort')" id="style-comfort" class="style-btn py-2 text-xs font-semibold rounded-lg border border-karnataka-forest bg-karnataka-forest text-white">Comfort</button>
+                <button type="button" onclick="setTravelStyle('luxury')" id="style-luxury" class="style-btn py-2 text-xs font-semibold rounded-lg border border-gray-300 bg-white hover:bg-amber-50">Heritage Luxury</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculated Summary Card -->
+        <div class="lg:col-span-7">
+          <div class="bg-karnataka-deepgreen text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden border border-amber-300/30">
+            <div class="flex items-center justify-between border-b border-white/15 pb-4 mb-6">
+              <div>
+                <span class="text-xs uppercase tracking-widest text-karnataka-gold font-bold">Estimated Cost Projection</span>
+                <h3 class="text-2xl font-serif font-bold text-white mt-1" id="circuitTitle">Royal Heritage Circuit</h3>
+              </div>
+              <div class="text-right">
+                <span class="text-xs text-gray-300">Total Approx.</span>
+                <p class="text-3xl font-serif font-extrabold text-karnataka-gold" id="totalCost">₹24,000</p>
+              </div>
+            </div>
+
+            <!-- Breakdown rows -->
+            <div class="space-y-3 text-sm font-light">
+              <div class="flex justify-between items-center py-1 border-b border-white/5">
+                <span class="text-gray-300"><i class="fa-solid fa-hotel text-karnataka-gold w-6"></i> Stay & Homestays:</span>
+                <span class="font-medium text-white" id="costHotel">₹14,000</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-white/5">
+                <span class="text-gray-300"><i class="fa-solid fa-car text-karnataka-gold w-6"></i> Transport (KSRTC / Cab / Fuel):</span>
+                <span class="font-medium text-white" id="costTransport">₹6,000</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-white/5">
+                <span class="text-gray-300"><i class="fa-solid fa-utensils text-karnataka-gold w-6"></i> Food & Cuisine:</span>
+                <span class="font-medium text-white" id="costFood">₹3,000</span>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <span class="text-gray-300"><i class="fa-solid fa-ticket text-karnataka-gold w-6"></i> Sightseeing, Guides & Monument Entry:</span>
+                <span class="font-medium text-white" id="costActivity">₹1,000</span>
+              </div>
+            </div>
+
+            <!-- Suggested Route Box -->
+            <div class="mt-6 bg-white/10 rounded-2xl p-4 backdrop-blur-sm border border-white/10">
+              <h5 class="text-xs uppercase font-bold tracking-wider text-karnataka-gold mb-1">Recommended Day Route:</h5>
+              <p class="text-xs text-gray-200 leading-relaxed" id="circuitRoute">
+                Day 1: Bengaluru (Lalbagh, Vidhana Soudha) → Day 2: Srirangapatna & Mysore Palace → Day 3-4: Overnight Hampi ruins & Virupaksha Temple sunset.
+              </p>
+            </div>
+
+            <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+              <span class="text-xs text-amber-200/80"><i class="fa-solid fa-circle-info mr-1"></i> Estimates include lodging, transit & entry passes.</span>
+              <button onclick="sharePlan()" class="text-xs bg-karnataka-gold text-karnataka-charcoal font-bold px-4 py-2 rounded-xl hover:bg-yellow-400 transition flex items-center gap-2">
+                <i class="fa-solid fa-copy"></i> Copy Itinerary Summary
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="travel-info" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-karnataka-richgold font-semibold text-xs sm:text-sm tracking-widest uppercase">Essential Traveler Guide</span>
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-karnataka-deepgreen mt-2">
+        Everything You Need for a Seamless Journey
+      </h2>
+      <p class="text-gray-600 mt-2 text-base">Weather seasons, transport connectivity, local Kannada phrases, and respectful etiquette.</p>
+    </div>
+
+    <!-- Seasons & Best Time to Visit -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <span class="text-xs uppercase font-bold tracking-wider text-blue-600">Peak Season</span>
+          <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mt-1 mb-2">Winter (October – March)</h3>
+          <p class="text-gray-600 text-sm font-light leading-relaxed">
+            Pleasant, cool weather across all regions (15°C - 28°C). The best time for heritage site explorations at Hampi, wildlife safaris at Bandipur, and beaches at Gokarna.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-500 font-medium">Ideal for: Mysore Dasara, Hampi Utsav, Trekking</div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+          </div>
+          <span class="text-xs uppercase font-bold tracking-wider text-emerald-600">Nature & Greenery</span>
+          <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mt-1 mb-2">Monsoon (July – September)</h3>
+          <p class="text-gray-600 text-sm font-light leading-relaxed">
+            The Western Ghats transform into misty, emerald wonders. Jog Falls and Abbey Falls roar at full strength, surrounded by swollen streams and vibrant coffee plantations.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-500 font-medium">Ideal for: Waterfalls, Ayurvedic wellness, Coorg</div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <span class="text-xs uppercase font-bold tracking-wider text-amber-600">Hill Retreats</span>
+          <h3 class="text-xl font-serif font-bold text-karnataka-deepgreen mt-1 mb-2">Summer (March – May)</h3>
+          <p class="text-gray-600 text-sm font-light leading-relaxed">
+            While central and north Karnataka can be warm (up to 38°C), hill stations like Chikmagalur, Kemmangundi, and Biligirirangana Hills (BR Hills) remain comfortably cool.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-500 font-medium">Ideal for: Hill stations, Coffee picking tours</div>
+      </div>
+    </div>
+
+    <!-- How to Reach + Kannada Phrases 2-Column Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- How to Reach Guide -->
+      <div class="lg:col-span-6 bg-white p-8 rounded-3xl border border-amber-100 shadow-sm">
+        <h3 class="text-2xl font-serif font-bold text-karnataka-deepgreen mb-6 flex items-center gap-3">
+          <i class="fa-solid fa-route text-karnataka-richgold"></i> How to Reach Karnataka
+        </h3>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-karnataka-forest flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-plane"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm">By Air</h4>
+              <p class="text-xs text-gray-600 leading-relaxed mt-1">
+                <strong>Kempegowda International Airport (BLR)</strong> in Bengaluru connects globally. Additional international/domestic airports include <strong>Mangaluru (IXE)</strong>, <strong>Belagavi (IXG)</strong>, <strong>Hubballi (HBX)</strong>, and <strong>Mysuru (MYQ)</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-karnataka-forest flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-train"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm">By Rail</h4>
+              <p class="text-xs text-gray-600 leading-relaxed mt-1">
+                South Western Railway operates seamless express and high-speed Vande Bharat trains connecting Bengaluru, Mysuru, Hubballi, and Belagavi to major Indian metropolises.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-karnataka-forest flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-bus"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm">By Road (KSRTC & Highways)</h4>
+              <p class="text-xs text-gray-600 leading-relaxed mt-1">
+                The Bengaluru-Mysuru 10-lane Expressway cuts transit to 90 minutes. World-class <strong>KSRTC Airavat Club Class</strong> luxury buses link every corner, hill town, and coastal hamlet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Essential Kannada Phrases & Cultural Etiquette -->
+      <div class="lg:col-span-6 bg-white p-8 rounded-3xl border border-amber-100 shadow-sm">
+        <h3 class="text-2xl font-serif font-bold text-karnataka-deepgreen mb-2 flex items-center gap-3">
+          <i class="fa-solid fa-comments text-karnataka-richgold"></i> Useful Kannada Phrases
+        </h3>
+        <p class="text-xs text-gray-500 mb-6 font-light">Locals appreciate visitors speaking words in Kannada!</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-100">
+            <span class="text-xs font-semibold text-karnataka-maroon uppercase">Hello / Greetings</span>
+            <p class="font-bold text-gray-800">ನಮಸ್ಕಾರ (Namaskara)</p>
+          </div>
+
+          <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-100">
+            <span class="text-xs font-semibold text-karnataka-maroon uppercase">Thank You</span>
+            <p class="font-bold text-gray-800">ಧನ್ಯವಾದಗಳು (Dhanyavadagalu)</p>
+          </div>
+
+          <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-100">
+            <span class="text-xs font-semibold text-karnataka-maroon uppercase">How much is this?</span>
+            <p class="font-bold text-gray-800">ಇದು ಎಷ್ಟು? (Idu Eshtu?)</p>
+          </div>
+
+          <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-100">
+            <span class="text-xs font-semibold text-karnataka-maroon uppercase">How are you?</span>
+            <p class="font-bold text-gray-800">ಹೇಗಿದ್ದೀರಾ? (Hegiddeera?)</p>
+          </div>
+
+          <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-100">
+            <span class="text-xs font-semibold text-karnataka-maroon uppercase">Very Good / Nice</span>
+            <p class="font-bold text-gray-800">ತುಂಬಾ ಚೆನ್ನಾಗಿದೆ (Tumba Chennagide)</p>
+          </div>
+
+          <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-100">
+            <span class="text-xs font-semibold text-karnataka-maroon uppercase">Where is this place?</span>
+            <p class="font-bold text-gray-800">ಈ ಜಾಗ ಎಲ್ಲಿದೆ? (Ee jaaga ellide?)</p>
+          </div>
+        </div>
+
+        <!-- Etiquette Notice -->
+        <div class="mt-6 p-4 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-200 text-xs leading-relaxed flex items-start gap-3">
+          <i class="fa-solid fa-hands-praying text-base text-emerald-700 mt-0.5"></i>
+          <div>
+            <strong>Temple & Monument Etiquette:</strong> Remove footwear before entering temples; dress modestly covering shoulders and knees. Maintain cleanliness and avoid plastic in Western Ghats ecology zones.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="infoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm transition-opacity">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl transform transition-all max-h-[90vh] flex flex-col">
+      <div class="relative h-64 shrink-0">
+        <img id="modalImage" src="" alt="Destination Photo" class="w-full h-full object-cover">
+        <button onclick="closeModal()" aria-label="Close details" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <span id="modalBadge" class="absolute bottom-4 left-4 bg-karnataka-forest text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"></span>
+      </div>
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-4">
+        <h3 id="modalTitle" class="text-2xl sm:text-3xl font-serif font-bold text-karnataka-deepgreen"></h3>
+        <p id="modalLocation" class="text-xs text-karnataka-richgold font-semibold uppercase tracking-wider flex items-center gap-1"></p>
+        <p id="modalDescription" class="text-gray-700 text-sm sm:text-base leading-relaxed font-light"></p>
+        
+        <div class="bg-amber-50 rounded-2xl p-4 border border-amber-200 grid grid-cols-2 gap-4 text-xs">
+          <div>
+            <span class="text-gray-500 block">Best Season to Visit:</span>
+            <strong id="modalSeason" class="text-karnataka-deepgreen"></strong>
+          </div>
+          <div>
+            <span class="text-gray-500 block">Key Experiences:</span>
+            <strong id="modalHighlights" class="text-karnataka-deepgreen"></strong>
+          </div>
+        </div>
+
+        <div class="pt-4 flex justify-end">
+          <button onclick="closeModal()" class="px-6 py-2.5 bg-karnataka-forest text-white rounded-xl text-sm font-semibold hover:bg-karnataka-deepgreen transition">
+            Close Overview
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/90 p-4 transition-all">
+    <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-6 right-6 text-white text-3xl hover:text-karnataka-gold z-10">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl w-full flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="Enlarged Karnataka Image" class="max-h-[75vh] w-auto rounded-2xl shadow-2xl object-contain">
+      <p id="lightboxCaption" class="text-white text-center text-base sm:text-lg font-serif mt-4"></p>
+      <span id="lightboxCategory" class="text-karnataka-gold text-xs uppercase tracking-widest mt-1"></span>
+    </div>
+  </div>
+
+  <footer class="bg-karnataka-deepgreen text-white pt-16 pb-10 border-t border-amber-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        <!-- Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-karnataka-maroon to-karnataka-gold flex items-center justify-center text-white">
+              <i class="fa-solid fa-gopuram text-xl"></i>
+            </div>
+            <div>
+              <span class="block text-xl font-serif font-black tracking-tight text-white">KARNATAKA</span>
+              <span class="text-[10px] uppercase tracking-widest text-karnataka-gold font-semibold">One State, Many Worlds</span>
+            </div>
+          </div>
+          <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed max-w-sm">
+            Celebrate Karnataka's grand heritage, misty hills, vibrant wildlife reserves, pristine beaches, and scrumptious delicacies. Your ultimate guide to unforgettable South Indian expeditions.
+          </p>
+          <div class="flex gap-3 text-base text-karnataka-gold pt-2">
+            <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-karnataka-gold hover:text-black transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-karnataka-gold hover:text-black transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-karnataka-gold hover:text-black transition"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Twitter" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-karnataka-gold hover:text-black transition"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-karnataka-gold tracking-wider uppercase mb-4">Highlights</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="#heritage" class="hover:text-white transition">Hampi Stone Chariot</a></li>
+            <li><a href="#heritage" class="hover:text-white transition">Mysore Palace (Amba Vilas)</a></li>
+            <li><a href="#nature" class="hover:text-white transition">Jog Falls Sagara</a></li>
+            <li><a href="#nature" class="hover:text-white transition">Coorg Coffee Hills</a></li>
+            <li><a href="#destinations" class="hover:text-white transition">Gokarna Om Beach</a></li>
+          </ul>
+        </div>
+
+        <!-- Travel Circuits -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-karnataka-gold tracking-wider uppercase mb-4">Circuits</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="#planner" class="hover:text-white transition">Royal Heritage Trail</a></li>
+            <li><a href="#planner" class="hover:text-white transition">Coastal Karavali Route</a></li>
+            <li><a href="#planner" class="hover:text-white transition">Western Ghats Trek</a></li>
+            <li><a href="#planner" class="hover:text-white transition">Bandipur Tiger Safari</a></li>
+            <li><a href="#cuisine" class="hover:text-white transition">Udupi Cuisine Tour</a></li>
+          </ul>
+        </div>
+
+        <!-- Emergency & Helpline -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-karnataka-gold tracking-wider uppercase mb-4">Support & Helpline</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><i class="fa-solid fa-phone text-karnataka-gold mr-1.5"></i> Tourism Helpline: 1363</li>
+            <li><i class="fa-solid fa-truck-medical text-karnataka-gold mr-1.5"></i> Emergency Ambulance: 108</li>
+            <li><i class="fa-solid fa-shield-halved text-karnataka-gold mr-1.5"></i> Police Assistance: 112</li>
+            <li><i class="fa-solid fa-envelope text-karnataka-gold mr-1.5"></i> info@karnatakatourism.org</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Note -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+        <p>© 2026 Karnataka Tourism Showcase — Crafted for travellers around the world.</p>
+        <p class="text-amber-300/80">"ಕನ್ನಡವೇ ಸತ್ಯ, ಕನ್ನಡವೇ ನಿತ್ಯ" (Kannada is Truth, Kannada is Eternal)</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 z-40 bg-karnataka-gold text-karnataka-charcoal w-11 h-11 rounded-full shadow-2xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:scale-110">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Notification Toast message -->
+  <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-karnataka-charcoal text-white px-6 py-3 rounded-full text-xs font-semibold shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-50 flex items-center gap-2 border border-amber-400">
+    <i class="fa-solid fa-circle-check text-karnataka-gold"></i>
+    <span id="toastMsg">Notification</span>
+  </div>
+
+  <script>
+    // Comprehensive Tourist Places Dataset
+    const destinations = [
+      {
+        id: 'hampi',
+        name: 'Hampi Vijayanagara',
+        category: 'heritage',
+        location: 'Vijayanagara District',
+        rating: '4.9',
+        image: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=700&q=80',
+        description: 'Vast boulder-strewn landscape sheltering the breathtaking ruins of the 14th-century Vijayanagara Empire, including the Vittala Stone Chariot, musical pillars, and Virupaksha Temple.',
+        season: 'October to March',
+        highlights: 'Stone Chariot, Tungabhadra Coracle Ride, Sunset at Matanga Hill'
+      },
+      {
+        id: 'mysore',
+        name: 'Mysuru (City of Palaces)',
+        category: 'heritage',
+        location: 'Mysuru District',
+        rating: '4.9',
+        image: 'https://images.unsplash.com/photo-1600100397608-f010f444f499?auto=format&fit=crop&w=700&q=80',
+        description: 'The cultural capital of Karnataka renowned for Amba Vilas Palace, silk sarees, aromatic sandalwood, and the grand 10-day Dasara festival celebrated with royal pomp.',
+        season: 'September to March',
+        highlights: 'Mysore Palace Illumination, Chamundi Hill, Devaraja Market'
+      },
+      {
+        id: 'coorg',
+        name: 'Coorg (Kodagu)',
+        category: 'nature',
+        location: 'Western Ghats',
+        rating: '4.8',
+        image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=80',
+        description: 'Known as the "Scotland of India", featuring mist-covered coffee and spice plantations, lush homestays, Abbey Falls, and the revered Talakaveri birthplace of the river Kaveri.',
+        season: 'Year-round (Best: Oct - Apr)',
+        highlights: 'Coffee Estate Walks, Dubare Elephant Camp, Abbey Falls'
+      },
+      {
+        id: 'gokarna',
+        name: 'Gokarna Beaches',
+        category: 'coastal',
+        location: 'Uttara Kannada',
+        rating: '4.7',
+        image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80',
+        description: 'A serene coastal town known for its naturally OM-shaped beach, Kudle Beach, cliff-top hikes, and the sacred Mahabaleshwar Shiva temple holding the Atmalinga.',
+        season: 'October to March',
+        highlights: 'Om Beach, Half Moon Beach Trek, Beach Camping, Temple'
+      },
+      {
+        id: 'bandipur',
+        name: 'Bandipur Tiger Reserve',
+        category: 'wildlife',
+        location: 'Chamarajanagar District',
+        rating: '4.8',
+        image: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=700&q=80',
+        description: 'Sprawling part of the Nilgiri Biosphere Reserve, home to one of India’s highest concentrations of Bengal Tigers, wild Asian elephants, Indian leopards, and gaurs.',
+        season: 'October to May',
+        highlights: 'Open-jeep Wildlife Safari, Bird Watching, Kabini Boat Safari'
+      },
+      {
+        id: 'chikmagalur',
+        name: 'Chikmagalur & Mullayanagiri',
+        category: 'nature',
+        location: 'Chikkamagaluru',
+        rating: '4.8',
+        image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80',
+        description: 'The birthplace of coffee in India. Offers high-altitude trekking to Mullayanagiri peak (1,930m), serene waterfalls like Hebbe & Jhari, and cozy plantation stays.',
+        season: 'September to March',
+        highlights: 'Mullayanagiri Peak Hike, Baba Budangiri, Coffee Tasting'
+      },
+      {
+        id: 'udupi',
+        name: 'Udupi & Malpe Beach',
+        category: 'spiritual',
+        location: 'Karavali Coastal',
+        rating: '4.8',
+        image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80',
+        description: 'World-famous for its 13th-century Sri Krishna Matha founded by saint Madhvacharya, the Kanakana Kindi window, pure vegetarian gastronomy, and St. Mary’s basaltic rock islands.',
+        season: 'October to February',
+        highlights: 'Krishna Mutt Darshan, St. Mary’s Island Ferry, Sea Walk'
+      },
+      {
+        id: 'hoysala',
+        name: 'Belur & Halebidu',
+        category: 'heritage',
+        location: 'Hassan District',
+        rating: '4.9',
+        image: 'https://images.unsplash.com/photo-1620619767323-b95a89183081?auto=format&fit=crop&w=700&q=80',
+        description: 'UNESCO World Heritage inscribed temples from the 12th century Hoysala era, featuring soft chloritic schist soapstone carved into intricate miniature sculptures.',
+        season: 'October to March',
+        highlights: 'Chennakeshava Temple, Hoysaleswara Temple, Madanika Carvings'
+      },
+      {
+        id: 'murudeshwar',
+        name: 'Murudeshwar',
+        category: 'spiritual',
+        location: 'Bhatkal Taluk',
+        rating: '4.7',
+        image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=80',
+        description: 'Home to the world’s second tallest statue of Lord Shiva (123 feet) on the Kanduka Hill, surrounded on three sides by the azure waters of the Arabian Sea and a 20-storey Gopura.',
+        season: 'October to March',
+        highlights: 'Giant Shiva Statue, 20-Storey Raja Gopura lift, Scuba at Netrani'
+      }
+    ];
+
+    // Lightbox Gallery Dataset
+    const galleryItems = [
+      {
+        title: 'Stone Chariot at Vittala Temple',
+        category: 'monuments',
+        caption: 'Iconic Vijayanagara stone chariot carved from granite blocks at Hampi.',
+        src: 'https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Mysore Palace Night Illumination',
+        category: 'monuments',
+        caption: 'Nearly 100,000 bulbs illuminating the Amba Vilas Palace on Sunday evening.',
+        src: 'https://images.unsplash.com/photo-1600100397608-f010f444f499?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Western Ghats Misty Coffee Canopy',
+        category: 'nature',
+        caption: 'Morning mist settling over Arabica coffee estates in Chikmagalur.',
+        src: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Gokarna Om Beach Waves',
+        category: 'coastal',
+        caption: 'The golden shores of Om Beach where the Arabian Sea laps rocky promontories.',
+        src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Elephant Herd in Bandipur',
+        category: 'nature',
+        caption: 'Wild Asian elephant family traversing the Nilgiri biosphere reserve.',
+        src: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Traditional Mysore Masala Dosa',
+        category: 'culture',
+        caption: 'Ghee-roasted crispy dosa with authentic red chutney and coconut dip.',
+        src: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Arabian Sea Sunset at Malpe',
+        category: 'coastal',
+        caption: 'Crimson twilight over the fisherman boats near Udupi coastline.',
+        src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Hoysala Architectural Soapstone Carvings',
+        category: 'monuments',
+        caption: 'Unbelievably precise 12th-century stone work at Chennakeshava Temple, Belur.',
+        src: 'https://images.unsplash.com/photo-1620619767323-b95a89183081?auto=format&fit=crop&w=1200&q=80'
+      }
+    ];
+
+    function renderDestinations(items) {
+      const grid = document.getElementById('destinationGrid');
+      grid.innerHTML = '';
+
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-12 text-gray-500">
+            <i class="fa-solid fa-compass text-4xl mb-3 text-amber-300"></i>
+            <p>No matching destinations found. Try another search or filter!</p>
+          </div>
+        `;
+        return;
+      }
+
+      items.forEach(dest => {
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-amber-100/80 flex flex-col group";
+        card.innerHTML = `
+          <div class="relative h-60 overflow-hidden">
+            <img src="${dest.image}" alt="${dest.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=700&q=80'">
+            <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+              ${dest.category}
+            </div>
+            <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-karnataka-charcoal text-xs font-bold px-2.5 py-1 rounded-lg flex items-center gap-1 shadow">
+              <i class="fa-solid fa-star text-amber-500 text-[10px]"></i> ${dest.rating}
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-karnataka-richgold font-semibold uppercase tracking-wider mb-1 flex items-center gap-1">
+                <i class="fa-solid fa-location-dot"></i> ${dest.location}
+              </div>
+              <h3 class="font-serif font-bold text-xl text-karnataka-deepgreen mb-2">${dest.name}</h3>
+              <p class="text-gray-600 text-xs sm:text-sm line-clamp-3 font-light leading-relaxed mb-4">
+                ${dest.description}
+              </p>
+            </div>
+            <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span class="text-xs text-gray-500"><i class="fa-regular fa-clock mr-1"></i> Best: ${dest.season}</span>
+              <button onclick="openModal('${dest.id}')" class="text-xs font-bold text-karnataka-forest hover:text-karnataka-gold flex items-center gap-1">
+                Details <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filterDestinations(category) {
+      // Update active button state
+      const buttons = document.querySelectorAll('#destFilterButtons .dest-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-karnataka-forest', 'text-white', 'shadow-md');
+        btn.classList.add('bg-gray-100', 'text-gray-700');
+      });
+
+      const activeBtn = event ? event.target : buttons[0];
+      if (activeBtn) {
+        activeBtn.classList.add('bg-karnataka-forest', 'text-white', 'shadow-md');
+        activeBtn.classList.remove('bg-gray-100', 'text-gray-700');
+      }
+
+      if (category === 'all') {
+        renderDestinations(destinations);
+      } else {
+        const filtered = destinations.filter(d => d.category.toLowerCase() === category.toLowerCase());
+        renderDestinations(filtered);
+      }
+    }
+
+    function renderGallery(items) {
+      const container = document.getElementById('galleryContainer');
+      container.innerHTML = '';
+
+      items.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = "relative rounded-2xl overflow-hidden h-52 sm:h-64 cursor-pointer group shadow-sm hover:shadow-lg transition-all";
+        div.onclick = () => openLightbox(item);
+        div.innerHTML = `
+          <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=700&q=80'">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-karnataka-gold">${item.category}</span>
+            <h4 class="font-serif font-bold text-sm leading-tight">${item.title}</h4>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function filterGallery(category) {
+      const tags = document.querySelectorAll('#galleryFilterContainer .gallery-tag');
+      tags.forEach(t => {
+        t.classList.remove('bg-karnataka-deepgreen', 'text-white');
+        t.classList.add('bg-gray-100', 'text-gray-700');
+      });
+
+      if (event && event.target) {
+        event.target.classList.add('bg-karnataka-deepgreen', 'text-white');
+        event.target.classList.remove('bg-gray-100', 'text-gray-700');
+      }
+
+      if (category === 'all') {
+        renderGallery(galleryItems);
+      } else {
+        const filtered = galleryItems.filter(g => g.category === category);
+        renderGallery(filtered);
+      }
+    }
+
+    function openModal(id) {
+      const dest = destinations.find(d => d.id === id);
+      if (!dest) return;
+
+      document.getElementById('modalImage').src = dest.image;
+      document.getElementById('modalBadge').innerText = dest.category;
+      document.getElementById('modalTitle').innerText = dest.name;
+      document.getElementById('modalLocation').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${dest.location}`;
+      document.getElementById('modalDescription').innerText = dest.description;
+      document.getElementById('modalSeason').innerText = dest.season;
+      document.getElementById('modalHighlights').innerText = dest.highlights;
+
+      const modal = document.getElementById('infoModal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('infoModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function openLightbox(item) {
+      document.getElementById('lightboxImg').src = item.src;
+      document.getElementById('lightboxCaption').innerText = item.caption;
+      document.getElementById('lightboxCategory').innerText = item.title + " • " + item.category.toUpperCase();
+
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function handleQuickSearch() {
+      const query = document.getElementById('quickSearchInput').value.trim().toLowerCase();
+      if (!query) {
+        renderDestinations(destinations);
+        document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      const results = destinations.filter(d => 
+        d.name.toLowerCase().includes(query) ||
+        d.location.toLowerCase().includes(query) ||
+        d.category.toLowerCase().includes(query) ||
+        d.description.toLowerCase().includes(query)
+      );
+
+      renderDestinations(results);
+      document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' });
+      showToast(`Showing search results for "${query}"`);
+    }
+
+    let selectedStyle = 'comfort';
+
+    function setTravelStyle(style) {
+      selectedStyle = style;
+      ['budget', 'comfort', 'luxury'].forEach(s => {
+        const btn = document.getElementById(`style-${s}`);
+        if (s === style) {
+          btn.className = "style-btn py-2 text-xs font-semibold rounded-lg border border-karnataka-forest bg-karnataka-forest text-white";
+        } else {
+          btn.className = "style-btn py-2 text-xs font-semibold rounded-lg border border-gray-300 bg-white hover:bg-amber-50 text-gray-700";
+        }
+      });
+      calculateTripEstimate();
+    }
+
+    function calculateTripEstimate() {
+      const circuit = document.getElementById('circuitSelect').value;
+      const days = parseInt(document.getElementById('tripDays').value) || 3;
+      const travelers = parseInt(document.getElementById('tripTravelers').value) || 1;
+
+      // Base rates per person per day
+      let perDayStay = 1500;
+      let perDayFood = 600;
+      let perDayTransit = 750;
+      let perDayActivity = 250;
+
+      if (selectedStyle === 'budget') {
+        perDayStay = 800;
+        perDayFood = 350;
+        perDayTransit = 400;
+        perDayActivity = 150;
+      } else if (selectedStyle === 'luxury') {
+        perDayStay = 4500;
+        perDayFood = 1400;
+        perDayTransit = 1800;
+        perDayActivity = 600;
+      }
+
+      const totalHotel = Math.round(perDayStay * days * Math.ceil(travelers / 2));
+      const totalFood = Math.round(perDayFood * days * travelers);
+      const totalTransit = Math.round(perDayTransit * days * (1 + (travelers - 1) * 0.35));
+      const totalActivity = Math.round(perDayActivity * days * travelers);
+      const grandTotal = totalHotel + totalFood + totalTransit + totalActivity;
+
+      document.getElementById('totalCost').innerText = '₹' + grandTotal.toLocaleString('en-IN');
+      document.getElementById('costHotel').innerText = '₹' + totalHotel.toLocaleString('en-IN');
+      document.getElementById('costTransport').innerText = '₹' + totalTransit.toLocaleString('en-IN');
+      document.getElementById('costFood').innerText = '₹' + totalFood.toLocaleString('en-IN');
+      document.getElementById('costActivity').innerText = '₹' + totalActivity.toLocaleString('en-IN');
+
+      const circuitMeta = {
+        royal: {
+          title: "Royal Heritage Trail",
+          route: "Day 1: Bengaluru (Vidhana Soudha, Lalbagh) → Day 2: Srirangapatna fort & Mysore Palace → Day 3-4: Overnight transit to Hampi (Stone Chariot, Virupaksha, Tungabhadra sunset)."
+        },
+        nature: {
+          title: "Misty Hills & Coffee Trail",
+          route: "Day 1-2: Coorg (Madikeri, Abbey Falls, coffee estate homestay, Raja's Seat) → Day 3-4: Chikmagalur & Mullayanagiri peak (Highest peak in Karnataka)."
+        },
+        coastal: {
+          title: "Golden Karavali Coastline",
+          route: "Day 1: Mangaluru cuisine & beaches → Day 2: Udupi Sri Krishna Temple & St. Mary's Island → Day 3: Murudeshwar giant Shiva → Day 4: Gokarna Om beach."
+        },
+        wildlife: {
+          title: "Jungle Safari & Tiger Circuit",
+          route: "Day 1: Mysuru to Kabini river reserve → Day 2: Boat safari & Nagarhole forest trail → Day 3: Bandipur Tiger Reserve elephant safari."
+        }
+      };
+
+      document.getElementById('circuitTitle').innerText = circuitMeta[circuit].title;
+      document.getElementById('circuitRoute').innerText = circuitMeta[circuit].route;
+    }
+
+    function sharePlan() {
+      const title = document.getElementById('circuitTitle').innerText;
+      const total = document.getElementById('totalCost').innerText;
+      const route = document.getElementById('circuitRoute').innerText;
+      const days = document.getElementById('tripDays').value;
+      const travelers = document.getElementById('tripTravelers').value;
+
+      const summary = `Karnataka Trip Plan: ${title} (${days} Days, ${travelers} Persons)\nProjected Cost: ${total}\nRoute: ${route}\nGenerated via Explore Karnataka.`;
+      
+      // Copy to clipboard fallback
+      const tempInput = document.createElement("textarea");
+      tempInput.value = summary;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      showToast("Itinerary summary copied to clipboard!");
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMsg').innerText = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none');
+        toast.classList.remove('opacity-100');
+      }, 3200);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initial renderings
+      renderDestinations(destinations);
+      renderGallery(galleryItems);
+      calculateTripEstimate();
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Quick search on Enter
+      document.getElementById('quickSearchInput').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          handleQuickSearch();
+        }
+      });
+
+      // Close modals on Escape key
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+          closeLightbox();
+        }
+      });
+
+      // Back to top scroll tracking
+      const backBtn = document.getElementById('backToTopBtn');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backBtn.classList.remove('opacity-0', 'pointer-events-none');
+          backBtn.classList.add('opacity-100');
+        } else {
+          backBtn.classList.add('opacity-0', 'pointer-events-none');
+          backBtn.classList.remove('opacity-100');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
